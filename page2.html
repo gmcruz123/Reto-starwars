@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="starwarsintro1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="star-wars-intro">
+        <div class="container" id="classcard">
+            <img class="card-img-top" id="imgcard" src="https://i.pinimg.com/originals/0b/5b/23/0b5b23f942c2a6fa3cd88a77c5666bc2.jpg"
+                alt="Card image cap">
+            <div id="titulomovie"></div>
+            <div class="texto" id="referenciamovie"></div>
+            <div class="texto" id="refmovie"></div>
+            <div class="texto" id="producermovie"></div>
+        
+          
+
+        <h2 class="main-logo">
+            <img src="starLogo.png">
+        </h2>
+
+    </div>
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div id="botondetalle" class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" onclick="getMovie(0)" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Personajes
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="container">
+                            <div id="personajes"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="botondetalle" class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed"  onclick="getMovie(2)" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo">
+                        Planetas
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div id="planetas"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="botondetalle" class="card-header" id="headingThree">
+                <h5  class="mb-0">
+                    <button  class="btn btn-link collapsed" onclick="getMovie(3)" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                        Naves
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" color="#000" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div id="naves"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="botondetalle" class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" onclick="getMovie(4)" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                        aria-controls="collapseFour">
+                        Vehiculos
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div id="vehiculos"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div id="botondetalle" class="card-header" id="headingFive">
+                <h5 id="titulocolor" class="mb-0">
+                    <button class="btn btn-link collapsed" onclick="getMovie(1)" type="button" data-toggle="collapse" data-target="#collapseFive"
+                        aria-expanded="false" aria-controls="collapseFive">
+                        Especies
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div id="especies"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div  class="container">
+            <div id="griMovies"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
